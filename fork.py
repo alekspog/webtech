@@ -6,7 +6,7 @@ sock.bind(('0.0.0.0', 2222))
 sock.listen(10)
 pid = os.fork()
 if pid:
-     conn.close() # !!! без этого не проходит проверку
+     conn.close()
 else: # process child -> while True recv sendall etc. conn.close()
 
      while True:
